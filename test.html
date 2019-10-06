@@ -1,0 +1,57 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta http-equiv="Content-Style-Type" content="text/css">
+  <title></title>
+  <meta name="Generator" content="Cocoa HTML Writer">
+  <meta name="CocoaVersion" content="1671.5">
+  <style type="text/css">
+    p.p1 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px 'Andale Mono'; color: #00006d; -webkit-text-stroke: #00006d; background-color: #ffffff}
+    p.p2 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px 'Andale Mono'; color: #313131; -webkit-text-stroke: #313131; background-color: #ffffff}
+    p.p3 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px 'Andale Mono'; color: #313131; -webkit-text-stroke: #313131; background-color: #ffffff; min-height: 14.0px}
+    p.p4 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px 'Andale Mono'; color: #878875; -webkit-text-stroke: #878875; background-color: #ffffff}
+    p.p5 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px 'Andale Mono'; color: #262626; -webkit-text-stroke: #262626; background-color: #ffffff}
+    p.p6 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px 'Andale Mono'; color: #d20035; -webkit-text-stroke: #d20035; background-color: #ffffff}
+    span.s1 {font-kerning: none; color: #313131; -webkit-text-stroke: 0px #313131}
+    span.s2 {font-kerning: none}
+    span.s3 {font-kerning: none; color: #00006d; -webkit-text-stroke: 0px #00006d}
+    span.s4 {font-kerning: none; color: #d20035; -webkit-text-stroke: 0px #d20035}
+    span.s5 {font: 14.0px Courier; font-kerning: none}
+    span.s6 {font-kerning: none; color: #118987; -webkit-text-stroke: 0px #118987}
+    span.s7 {font-kerning: none; color: #0e72a4; -webkit-text-stroke: 0px #0e72a4}
+    span.s8 {font-kerning: none; color: #0e6e6d; -webkit-text-stroke: 0px #0e6e6d}
+  </style>
+</head>
+<body>
+<p class="p1"><span class="s1">&lt;</span><span class="s2">html</span><span class="s1">&gt;</span></p>
+<p class="p2"><span class="s2"><span class="Apple-converted-space">    </span>&lt;</span><span class="s3">title</span><span class="s2">&gt;</span></p>
+<p class="p2"><span class="s2"><span class="Apple-converted-space">        </span>Cloud API Demo</span></p>
+<p class="p2"><span class="s2"><span class="Apple-converted-space">    </span>&lt;/</span><span class="s3">title</span><span class="s2">&gt;</span></p>
+<p class="p3"><span class="s2"></span><br></p>
+<p class="p2"><span class="s2"><span class="Apple-converted-space">    </span>&lt;</span><span class="s3">head</span><span class="s2">&gt;</span></p>
+<p class="p2"><span class="s2"><span class="Apple-converted-space">        </span>&lt;</span><span class="s3">script</span><span class="s2">&gt;</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">        </span></span><span class="s2">// Open connection to api.openalpr.com</span></p>
+<p class="p5"><span class="s1"><span class="Apple-converted-space">        </span>var secret_key = </span><span class="s4">"</span><span class="s5">sk_4b4603fdd2327f76738b541d</span><span class="s4">"</span><span class="s1">;</span></p>
+<p class="p6"><span class="s1"><span class="Apple-converted-space">        </span>var url = </span><span class="s2">"https://api.openalpr.com/v2/recognize_bytes?recognize_vehicle=1&amp;country=us&amp;secret_key="</span><span class="s1"> + secret_key;</span></p>
+<p class="p2"><span class="s2"><span class="Apple-converted-space">        </span>var xhr = new XMLHttpRequest();</span></p>
+<p class="p2"><span class="s2"><span class="Apple-converted-space">        </span>xhr.open(</span><span class="s4">"POST"</span><span class="s2">, url);</span></p>
+<p class="p3"><span class="s2"></span><br></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">        </span></span><span class="s2">// Send POST data and display response</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">        </span>xhr.send(</span><span class="s4">"base64_string"</span><span class="s1">);<span class="Apple-converted-space">  </span></span><span class="s2">// Replace with base64 string of an actual image</span></p>
+<p class="p2"><span class="s2"><span class="Apple-converted-space">        </span>xhr.onreadystatechange = function() {</span></p>
+<p class="p2"><span class="s2"><span class="Apple-converted-space">            </span>if (xhr.readyState == </span><span class="s6">4</span><span class="s2">) {</span></p>
+<p class="p2"><span class="s2"><span class="Apple-converted-space">                </span></span><span class="s7">document</span><span class="s2">.getElementById(</span><span class="s4">"response"</span><span class="s2">).innerHTML = xhr.responseText;</span></p>
+<p class="p2"><span class="s2"><span class="Apple-converted-space">            </span>} else {</span></p>
+<p class="p2"><span class="s2"><span class="Apple-converted-space">                </span></span><span class="s7">document</span><span class="s2">.getElementById(</span><span class="s4">"response"</span><span class="s2">).innerHTML = </span><span class="s4">"Waiting on response..."</span><span class="s2">;</span></p>
+<p class="p2"><span class="s2"><span class="Apple-converted-space">            </span>}</span></p>
+<p class="p2"><span class="s2"><span class="Apple-converted-space">        </span>}</span></p>
+<p class="p2"><span class="s2"><span class="Apple-converted-space">        </span>&lt;/</span><span class="s3">script</span><span class="s2">&gt;</span></p>
+<p class="p2"><span class="s2"><span class="Apple-converted-space">    </span>&lt;/</span><span class="s3">head</span><span class="s2">&gt;</span></p>
+<p class="p3"><span class="s2"></span><br></p>
+<p class="p2"><span class="s2"><span class="Apple-converted-space">    </span>&lt;</span><span class="s3">body</span><span class="s2">&gt;</span></p>
+<p class="p2"><span class="s2"><span class="Apple-converted-space">        </span>JSON response: &lt;</span><span class="s3">p</span><span class="s2"> </span><span class="s8">id</span><span class="s2">=</span><span class="s4">"response"</span><span class="s2">&gt;&lt;/</span><span class="s3">p</span><span class="s2">&gt;&lt;</span><span class="s3">br</span><span class="s2">&gt;</span></p>
+<p class="p2"><span class="s2"><span class="Apple-converted-space">    </span>&lt;/</span><span class="s3">body</span><span class="s2">&gt;</span></p>
+<p class="p1"><span class="s1">&lt;/</span><span class="s2">html</span><span class="s1">&gt;</span></p>
+</body>
+</html>
